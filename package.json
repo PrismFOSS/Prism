@@ -60,6 +60,10 @@
     "yamljs": "^0.3.0"
   },
   "scripts": {
+    "install": "npm run redis && npm run bun && npm run main",
+    "main": "bun install && cp example_config.toml config.toml && cd app && npm install && npm run build && cd .. && bun run app.js",
+    "redis": "sudo apt update && sudo apt install redis-server -y && sudo systemctl enable redis && sudo systemctl start redis",
+    "bun": "curl -fsSL https://bun.sh/install | bash && source ~/.bashrc && bun upgrade --canary",
     "mono:build": "cd panel && npm run build",
     "db:build:macos": "cd prismdb && cargo build --release && cp target/release/libprismdb.dylib ../ffi/libprismdb.dylib",
     "db:build:linux": "cd prismdb && cargo build --release && cp target/release/libprismdb.so ../ffi/libprismdb.so",
