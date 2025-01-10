@@ -528,12 +528,14 @@ export default function MainLayout() {
                   User {userData.id}
                   </DropdownMenuLabel>
                 <DropdownMenuSeparator className="bg-neutral-800" />
-                <DropdownMenuItem 
-                  className="text-neutral-400 hover:text-white focus:text-white cursor-pointer focus:bg-neutral-800 hover:bg-neutral-800"
-                >
-                  <Settings className="mr-2 h-4 w-4" />
-                  <span>Settings</span>
-                </DropdownMenuItem>
+              <DropdownMenuItem 
+               className="text-neutral-400 hover:text-white focus:text-white cursor-pointer focus:bg-neutral-800 hover:bg-neutral-800"
+               onClick={() => window.location.href = '/account'}
+             >
+               <Settings className="mr-2 h-4 w-4" />
+               <span>Settings</span>
+             </DropdownMenuItem>
+
                 <DropdownMenuItem 
                   className="cursor-pointer text-red-500 hover:text-red-400 focus:text-red-400 focus:bg-neutral-800 hover:bg-neutral-800" 
                   onClick={handleLogout}
