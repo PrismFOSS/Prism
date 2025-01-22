@@ -55,9 +55,9 @@ redisClient.on('connect', () => {
 });
 
 // Version information
-const VERSION = "0.5.0-alpha4";
+const VERSION = "0.5.0";
 const PLATFORM_CODENAME = "Adelante";
-const PLATFORM_LEVEL = 'release 121';
+const PLATFORM_LEVEL = 'release 130';
 
 console.log(`Prism ${VERSION} (${PLATFORM_CODENAME} ${PLATFORM_LEVEL})`);
 
@@ -261,10 +261,11 @@ class UpdateManager {
   }
 
   restartApplication() {
-    console.log('Restarting application to apply updates...');
+    console.log('Killing process - your Prism dashboard has been updated!');
+    console.log('Please start the application again to boot the new version');
     if (global.server) {
       global.server.close(() => {
-        process.exit(0); // Process manager should restart the application
+        process.exit(0);
       });
     } else {
       process.exit(0);

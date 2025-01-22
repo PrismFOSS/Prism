@@ -21,7 +21,7 @@ const workflowsFilePath = path.join(__dirname, "../storage/workflows.json");
 const PrismModule = {
   name: "server:core",
   api_level: 3,
-  target_platform: "0.5.0-alpha4",
+  target_platform: "0.5.0",
 };
 
 const PANEL_URL = settings.pterodactyl.domain;

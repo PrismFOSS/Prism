@@ -5,7 +5,7 @@ const ejs = require("ejs");
 const fetch = require('node-fetch');
 
 /* Ensure platform release target is met */
-const PrismModule = { "name": "Referrals (legacy)", "api_level": 1, "target_platform": "0.5.0-alpha4" };
+const PrismModule = { "name": "Referrals (legacy)", "api_level": 1, "target_platform": "0.5.0" };
 
 /* Module */
 module.exports.PrismModule = PrismModule;

@@ -17,7 +17,7 @@ if (settings.pterodactyl?.domain?.slice(-1) === '/') {
 const PrismModule = {
     name: "server:worlds",
     api_level: 3,
-    target_platform: "0.5.0-alpha4",
+    target_platform: "0.5.0",
   };
   
 module.exports.PrismModule = PrismModule;

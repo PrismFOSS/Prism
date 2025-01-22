@@ -7,7 +7,7 @@ const { v4: uuidv4 } = require('uuid');
 const PrismModule = { 
   "name": "Support Tickets", 
   "api_level": 3, 
-  "target_platform": "0.5.0-alpha4" 
+  "target_platform": "0.5.0" 
 };
 
 if (PrismModule.target_platform !== settings.version) {

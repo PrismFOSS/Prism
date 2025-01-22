@@ -12,7 +12,7 @@ const { isAuthenticated, ownsServer, logActivity, PANEL_URL, API_KEY } = require
 const PrismModule = {
   name: "server:files_transfer",
   api_level: 3,
-  target_platform: "0.5.0-alpha4",
+  target_platform: "0.5.0",
 };
 
 module.exports.PrismModule = PrismModule;

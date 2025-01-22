@@ -10,7 +10,7 @@ const { renderFile } = require("ejs");
 
 const RESEND_API_KEY = settings.api.client.resend.api_key;
 
-const PrismModule = { "name": "User/Password Auth with Email", "api_level": 3, "target_platform": "0.5.0-alpha4" };
+const PrismModule = { "name": "User/Password Auth with Email", "api_level": 3, "target_platform": "0.5.0" };
 
 if (PrismModule.target_platform !== settings.version) {
   console.log('Module ' + PrismModule.name + ' does not support this platform release of Prism. The module was built for platform ' + PrismModule.target_platform + ' but is attempting to run on version ' + settings.version + '.')

@@ -18,7 +18,7 @@ const fetch = require("node-fetch");
 const Queue = require("../handlers/Queue.js");
 
 /* Ensure platform release target is met */
-const PrismModule = { "name": "Extra Features", "api_level": 3, "target_platform": "0.5.0-alpha4" };
+const PrismModule = { "name": "Extra Features", "api_level": 3, "target_platform": "0.5.0" };
 
 if (PrismModule.target_platform !== settings.version) {
   console.log('Module ' + PrismModule.name + ' does not support this platform release of Prism. The module was built for platform ' + PrismModule.target_platform + ' but is attempting to run on version ' + settings.version + '.')

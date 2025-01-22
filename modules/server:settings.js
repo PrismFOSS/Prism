@@ -8,7 +8,7 @@ const axios = require('axios');
 const PrismModule = {
     "name": "Settings",
     "api_level": 3,
-    "target_platform": "0.5.0-alpha4"
+    "target_platform": "0.5.0"
 };
 
 if (PrismModule.target_platform !== settings.version) {

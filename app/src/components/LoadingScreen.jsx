@@ -25,7 +25,7 @@ export default function LoadingScreen() {
       {/* Center Content */}
       <div className="flex flex-col items-center gap-8">
         <Loader2 className="h-10 w-10 text-white animate-spin" />
-        <div className="font-mono text-xs text-neutral-500">Prism 0.5.0-alpha4 (Adelante)</div>
+        <div className="font-mono text-xs text-neutral-500">Prism 0.5.0 (Adelante)</div>
       </div>
     </div>
   );

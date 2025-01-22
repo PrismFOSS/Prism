@@ -478,9 +478,9 @@ export default function AdminOverview() {
                   <div className="flex items-center text-sm">
                     <Badge variant="outline" className="mr-2">{config?.version}</Badge>
                     <ChevronRight className="w-4 h-4 text-neutral-500" />
-                    <span className="text-neutral-400">Platform Level {config?.platform_level}</span>
+                    <span className="text-neutral-400">Platform {config?.platform_level}</span>
                     <ChevronRight className="w-4 h-4 text-neutral-500" />
-                    <span className="text-neutral-400">{config?.platform_codename}</span>
+                    <span className="text-neutral-400">"{config?.platform_codename}"</span>
                   </div>
                 </div>
                 <SystemStats />
@@ -547,11 +547,11 @@ export default function AdminOverview() {
                       onClick={() => setIsBackupsDialogOpen(true)}
                     >
                       <Archive className="w-4 h-4 mr-2" />
-                      Manage Backups
+                      Config Backups
                     </Button>
                     <Button 
                       variant="outline" 
-                      className="w-full justify-start"
+                      className="w-full justify-start hidden"
                       onClick={() => window.open('/api/config/backups', '_blank')}
                     >
                       <FileCode className="w-4 h-4 mr-2" />
@@ -559,7 +559,7 @@ export default function AdminOverview() {
                     </Button>
                     <Button 
                       variant="outline" 
-                      className="w-full justify-start"
+                      className="w-full justify-start hidden"
                       onClick={async () => {
                         try {
                           await axios.post('/api/panel/rebuild');

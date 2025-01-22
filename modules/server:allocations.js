@@ -12,7 +12,7 @@ const { isAuthenticated, ownsServer, PANEL_URL, API_KEY } = require("./server:co
 const PrismModule = {
   name: "server:allocations",
   api_level: 3,
-  target_platform: "0.5.0-alpha4",
+  target_platform: "0.5.0",
 };
 
 module.exports.PrismModule = PrismModule;

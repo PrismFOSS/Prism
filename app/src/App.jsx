@@ -116,9 +116,9 @@ class ErrorBoundary extends React.Component {
                   </AccordionTrigger>
                   <AccordionContent>
                     <div className="space-y-2 text-sm text-muted-foreground">
-                      <p>Version: Prism 0.5.0-alpha4</p>
+                      <p>Version: Prism 0.5.0</p>
                       <p>Codename: Adelante</p>
-                      <p>Platform: 120</p>
+                      <p>Platform: 130</p>
                       <p>User Agent: {navigator.userAgent}</p>
                       <p>Timestamp: {new Date().toISOString()}</p>
                     </div>

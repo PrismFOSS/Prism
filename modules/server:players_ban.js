@@ -11,7 +11,7 @@ const { isAuthenticated, ownsServer, sendCommandAndGetResponse, logActivity } = 
 const PrismModule = {
   name: "server:players_ban",
   api_level: 3,
-  target_platform: "0.5.0-alpha4",
+  target_platform: "0.5.0",
 };
 
 module.exports.PrismModule = PrismModule;

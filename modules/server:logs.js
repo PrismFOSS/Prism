@@ -11,7 +11,7 @@ const { isAuthenticated, ownsServer } = require("./server:core.js");
 const PrismModule = {
   name: "server:logs",
   api_level: 3,
-  target_platform: "0.5.0-alpha4",
+  target_platform: "0.5.0",
 };
 
 module.exports.PrismModule = PrismModule;

@@ -1,6 +1,6 @@
 {
   "name": "prism",
-  "version": "0.5.0-alpha4",
+  "version": "0.5.0",
   "description": "The official Heliactyl client area for the Pterodactyl Panel.",
   "main": "app.js",
   "author": "Matt James",
