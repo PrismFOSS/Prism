@@ -1,12 +1,27 @@
 #!/bin/bash
 
-# Function to display messages in color
+set -e
+
+# Log file
+LOG_FILE="installer.log"
+
+# Create or clear the log file
+> "$LOG_FILE"
+
+# Function to get the current timestamp
+function current_timestamp() {
+    echo "$(date '+%Y-%m-%d %H:%M:%S')"
+}
+
+# Function to display messages in color and log them
 function print_message() {
-    echo -e "\033[1;32m$1\033[0m"
+    local message="$1"
+    echo -e "[INFO] $(current_timestamp) - \033[1;32m$message\033[0m" | tee -a "$LOG_FILE"
 }
 
 function print_error() {
-    echo -e "\033[1;31mERROR: $1\033[0m"
+    local message="$1"
+    echo -e "[ERROR] $(current_timestamp) - \033[1;31mERROR: $message\033[0m" | tee -a "$LOG_FILE"
 }
 
 # Function to show a spinner while waiting
@@ -107,22 +122,17 @@ else
     print_message "Nginx is not installed. Please install it and configure it manually by checking the README file."
 fi
 
-# Final confirmation to build and start Prism
-read -p "Do you want to build and start Prism now? (y/n): " confirm
-if [[ "$confirm" == "y" ]]; then
-    cd app || exit
-    print_message "Installing app dependencies..."
-    npm install &
-    show_spinner $!
-    print_message "Building the app..."
-    npm run build &
-    show_spinner $!
-    cd ../ || exit
-    print_message "Starting Prism..."
-    bun run app.js &
-    show_spinner $!
-else
-    print_message "You can start Prism later by running 'bun run app.js' in the Prism directory."
-fi
+# Automatically build and start Prism
+cd app || exit
+print_message "Installing app dependencies..."
+npm install &
+show_spinner $!
+print_message "Building the app..."
+npm run build &
+show_spinner $!
+cd ../ || exit
+print_message "Starting Prism..."
+bun run app.js &
+show_spinner $!
 
 print_message "Installation completed successfully!"
