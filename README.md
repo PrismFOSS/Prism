@@ -131,7 +131,7 @@ bun run app.js
 ## Using the installation scripts
 To use the installation scripts, simply run this command as root.
 ```bash
-bash <(curl -Ss raw.githubusercontent.com/Itz-Pixel-Dev/Prism/main/install.sh)
+bash <(curl -Ss raw.githubusercontent.com/Itz-Pixel-Dev/Prism/main/install.bash)
 ```
 Note: On some systems, it's required to be already logged in as ```root``` before executing the one-line command (where sudo is in front of the command does not work).
 
